@@ -1,13 +1,24 @@
-// Write your JavaScript code here!
+
+// import { formSubmission } from "./scriptHelper.js";
 
 window.addEventListener("load", function () {
 
-    let form = document.querySelector("#launchForm");
-    form.addEventListener("#launchForm", function(event) {
-        let pilotNameInput = document.querySelector("#pilotName");
-        if (pilotNameInput.value === "") {
-            alert("All fields are required!");
-        }
+    const form = document.querySelector("#launchForm");
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        let pilotNameInput = document.querySelector("#pilotName").value;
+        let copilotNameInput = document.querySelector('input[name=copilotName]').value;
+        let fuelLevelInput = document.querySelector('input[name=fuelLevel]').value;
+        let cargoMassInput = document.querySelector('input[name=cargoMass]').value;
+        let faultyList = document.querySelector('#faultyItems').value;
+
+        // if (pilotNameInput.value === "" || copilotNameInput.value === "" ||
+        //     fuelLevelInput.value === "" || cargoMassInput.value === "") {
+        //     alert("All fields are required!");
+        //     event.preventDefault();
+        // }
+
+        formSubmission(document, faultyList, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
     });
     
     let listedPlanets;
