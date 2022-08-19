@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
         let copilotNameInput = document.querySelector('input[name=copilotName]').value;
         let fuelLevelInput = document.querySelector('input[name=fuelLevel]').value;
         let cargoMassInput = document.querySelector('input[name=cargoMass]').value;
-        let faultyList = document.querySelector('#faultyItems').value;
+        let faultyList = document.querySelector('#faultyItems');
 
         // if (pilotNameInput.value === "" || copilotNameInput.value === "" ||
         //     fuelLevelInput.value === "" || cargoMassInput.value === "") {
