@@ -1,5 +1,5 @@
 
-import { formSubmission } from "./scriptHelper.js";
+const { formSubmission } = require("./scriptHelper.js");
 
 window.addEventListener("load", function () {
 
