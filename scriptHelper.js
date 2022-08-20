@@ -4,7 +4,7 @@ require('isomorphic-fetch');
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     // Here is the HTML formatting for our mission target div.
     let missionTargetResponse = document.querySelector("#missionTarget");
-    // document.querySelector("#faultyItems").style.visibility = "hidden";
+    document.querySelector("#faultyItems").style.visibility = "hidden"; //not working for failing test
     missionTargetResponse.innerHTML = `
                  <h2>Mission Destination</h2>
                  <ol>
@@ -81,7 +81,7 @@ async function myFetch() {
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
         return response.json()
     });
-
+    document.querySelector("#faultyItems").style.visibility = "hidden";
     return planetsReturned;
 }
 
