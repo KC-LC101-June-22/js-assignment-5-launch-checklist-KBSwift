@@ -1,7 +1,8 @@
-const { formSubmission } = require("./scriptHelper.js");
+const scriptHelper = require("./scriptHelper.js");
 
 window.addEventListener("load", function () {
 
+    this.document.querySelector("#faultyItems").style.visibility = "hidden";
     const form = document.querySelector("#launchForm");
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -17,7 +18,7 @@ window.addEventListener("load", function () {
         //     event.preventDefault();
         // }
 
-        formSubmission(document, faultyList, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
+        scriptHelper.formSubmission(document, faultyList, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
     });
 
     let listedPlanets;
