@@ -48,7 +48,10 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         // cargoLevel = Number(cargoLevel);
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+        list.style.visibility = "hidden";
     }
+    
+    list.style.visibility = "hidden";
 
     if (fuelLevel < 10000) {
         list.style.visibility = "visible";
@@ -68,7 +71,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         launchStatus.style.color = "rgb(65, 159, 106)";
         fuelStatus.innerHTML = `Fuel level high enough for launch`;
         cargoStatus.innerHTML = `Cargo mass low enough for launch`;
-        list.style.visibility = "hidden";
+        list.style.visibility = "visible";
     }
 
 }
