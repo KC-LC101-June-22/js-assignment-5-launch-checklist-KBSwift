@@ -1,5 +1,5 @@
 
-// import { formSubmission } from "./scriptHelper.js";
+import { formSubmission } from "./scriptHelper.js";
 
 window.addEventListener("load", function () {
 
