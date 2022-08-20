@@ -1,7 +1,3 @@
-
-const faultyVisibility = document.querySelector("#faultyItems");
-faultyVisibility.style.visibility = "hidden";
-
 const { formSubmission } = require("./scriptHelper.js");
 
 window.addEventListener("load", function () {
