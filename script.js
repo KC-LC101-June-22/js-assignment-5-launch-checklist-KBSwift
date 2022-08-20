@@ -11,7 +11,6 @@ window.addEventListener("load", function () {
         let fuelLevelInput = document.querySelector('input[name=fuelLevel]').value;
         let cargoMassInput = document.querySelector('input[name=cargoMass]').value;
         let faultyList = document.querySelector('#faultyItems');
-        faultyList.style.visibility = "hidden";
 
         // if (pilotNameInput.value === "" || copilotNameInput.value === "" ||
         //     fuelLevelInput.value === "" || cargoMassInput.value === "") {

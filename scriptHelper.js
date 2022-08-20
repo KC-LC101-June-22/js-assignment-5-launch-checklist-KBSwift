@@ -33,6 +33,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let fuelStatus = document.querySelector('#fuelStatus');
     let cargoStatus = document.querySelector('#cargoStatus');
     let launchStatus = document.querySelector('#launchStatus');
+    list.style.visibility = "hidden";
 
     if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" ||
         validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
@@ -47,7 +48,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         // cargoLevel = Number(cargoLevel);
         pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
         copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
-        list.style.visibility = "hidden";
     }
 
     if (fuelLevel < 10000) {
