@@ -2,9 +2,7 @@
 const { formSubmission } = require("./scriptHelper.js");
 
 window.addEventListener("load", function () {
-
-    const faultyVisibility = document.querySelector("#faultyItems");
-    faultyVisibility.style.visibility = "hidden";
+    
     const form = document.querySelector("#launchForm");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
@@ -23,6 +21,9 @@ window.addEventListener("load", function () {
         formSubmission(document, faultyList, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
     });
     
+    const faultyVisibility = document.querySelector("#faultyItems");
+    faultyVisibility.style.visibility = "hidden";
+
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse = myFetch();
