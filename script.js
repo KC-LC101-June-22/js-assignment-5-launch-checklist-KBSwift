@@ -3,7 +3,7 @@ const { formSubmission } = require("./scriptHelper.js");
 
 window.addEventListener("load", function () {
 
-    document.querySelector("#faultyItems").style.visibility = "hidden";
+    this.document.querySelector("#faultyItems").style.visibility = "hidden";
 
     const form = document.querySelector("#launchForm");
     form.addEventListener("submit", function(event) {
