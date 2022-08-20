@@ -3,6 +3,7 @@
 
 window.addEventListener("load", function () {
 
+    this.document.querySelector("#faultyItems").style.visibility = "hidden";
     const form = document.querySelector("#launchForm");
     form.addEventListener("submit", function(event) {
         event.preventDefault();
