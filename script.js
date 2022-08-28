@@ -1,5 +1,3 @@
-const { formSubmission } = require("./scriptHelper.js");
-this.document.querySelector("#faultyItems").style.visibility = "hidden"; //not working for failing test
 
 window.addEventListener("load", function () {
 
