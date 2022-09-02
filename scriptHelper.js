@@ -106,7 +106,7 @@ async function myFetch() {
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then(function (response) {
         return response.json()
     });
-    // document.querySelector("#faultyItems").style.visibility = "hidden"; //not working for failing test
+    document.querySelector("#faultyItems").style.visibility = "hidden"; //not working for failing test
     return planetsReturned;
 }
 
